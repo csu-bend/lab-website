@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BEND Lab — Barrier Engineering &amp; Nanomedicine Development</title>
+<meta name="description" content="조선대학교 약학대학 BEND Lab. 생체 장벽을 모사하는 칩을 만들고, 그 장벽을 넘는 나노의약품을 설계합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">BE<span>N</span>D</span>
+      <span class="brand-sub">Barrier Engineering &amp; Nanomedicine Development</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">메뉴</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="professor.html">Professor</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="members.html">Members</a>
+      <a href="news.html">News</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-affil">조선대학교 약학대학 · Chosun University, College of Pharmacy</p>
+        <h1>
+          We build biological barriers.<br>
+          <span class="cross">And we cross them.</span>
+        </h1>
+        <p class="hero-lede">
+          혈액뇌관문, 종양 미세환경, 섬유화된 조직. 우리는 약물이 실제로 마주하는 장벽을
+          칩 위에 다시 만들고, 그 장벽을 넘어가는 나노 전달체를 설계합니다.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="research.html">연구 주제 보기</a>
+          <a class="btn" href="publications.html">논문 목록</a>
+        </div>
+      </div>
+
+      <div>
+        <svg viewBox="0 0 420 340" role="img" aria-label="나노 전달체가 생체 장벽을 통과하는 모식도" style="width:100%;height:auto">
+          <defs>
+            <pattern id="bilayer" width="11" height="26" patternUnits="userSpaceOnUse">
+              <line x1="5.5" y1="4" x2="5.5" y2="22" stroke="#0e7c8b" stroke-width="1.1" opacity=".45"/>
+              <circle cx="5.5" cy="4" r="3" fill="#0e7c8b" opacity=".2"/>
+              <circle cx="5.5" cy="22" r="3" fill="#0e7c8b" opacity=".2"/>
+            </pattern>
+          </defs>
+
+          <text x="2" y="16" font-family="Inter Tight, Noto Sans KR, sans-serif" font-size="12" fill="#7d949a">혈류</text>
+          <text x="2" y="332" font-family="Inter Tight, Noto Sans KR, sans-serif" font-size="12" fill="#7d949a">표적 조직</text>
+
+          <!-- 장벽 -->
+          <rect x="0" y="150" width="420" height="26" fill="url(#bilayer)"/>
+          <line x1="0" y1="150" x2="420" y2="150" stroke="#0e7c8b" stroke-width="1.5" opacity=".7"/>
+          <line x1="0" y1="176" x2="420" y2="176" stroke="#0e7c8b" stroke-width="1.5" opacity=".7"/>
+          <text x="418" y="200" text-anchor="end" font-family="Inter Tight, Noto Sans KR, sans-serif" font-size="12" fill="#0e7c8b" opacity=".85">생체 장벽</text>
+
+          <!-- 통과하는 전달체 -->
+          <g class="crosser">
+            <circle cx="96" cy="58" r="11" fill="#b4237b" opacity=".92"/>
+            <circle cx="96" cy="58" r="17" fill="none" stroke="#b4237b" stroke-width="1" opacity=".35"/>
+          </g>
+          <g class="crosser crosser-2">
+            <circle cx="216" cy="58" r="8" fill="#b4237b" opacity=".82"/>
+            <circle cx="216" cy="58" r="13.5" fill="none" stroke="#b4237b" stroke-width="1" opacity=".3"/>
+          </g>
+          <g class="crosser crosser-3">
+            <circle cx="330" cy="58" r="13" fill="#b4237b" opacity=".86"/>
+            <circle cx="330" cy="58" r="19.5" fill="none" stroke="#b4237b" stroke-width="1" opacity=".32"/>
+          </g>
+
+          <!-- 넘지 못하고 막에 걸린 것들 -->
+          <circle cx="150" cy="132" r="6.5" fill="none" stroke="#7d949a" stroke-width="1.3"/>
+          <circle cx="266" cy="126" r="9" fill="none" stroke="#7d949a" stroke-width="1.3"/>
+          <circle cx="386" cy="136" r="5" fill="none" stroke="#7d949a" stroke-width="1.3"/>
+          <circle cx="60" cy="120" r="7.5" fill="none" stroke="#7d949a" stroke-width="1.3"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="membrane membrane--live"></div></div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head narrow">
+        <h2>두 개의 축으로 일합니다</h2>
+        <p>
+          장벽을 만드는 쪽과 넘는 쪽이 같은 연구실 안에 있습니다.
+          제형을 설계하면 바로 옆에서 사람 세포 기반 칩으로 검증하고, 칩에서 나온 결과가 다시 제형 설계를 바꿉니다.
+          동물 실험에 기대지 않고도 임상에 가까운 판단을 내리는 것이 목표입니다.
+        </p>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3 style="color:var(--membrane)">장벽을 만든다</h3>
+          <p>
+            혈액뇌관문 칩, 3차원 종양 미세환경 칩, 그리고 간 섬유화 모델까지.
+            환자 유래 세포와 iPSC 분화 혈관세포를 써서, 약물이 실제로 통과해야 하는 조건을
+            사람 조직에 가깝게 재현합니다.
+          </p>
+        </div>
+        <div>
+          <h3 style="color:var(--signal)">장벽을 넘는다</h3>
+          <p>
+            단백질 기반 나노입자, 콘드로이틴 설페이트 표적 전달체, 광역학 치료용 나노플랫폼,
+            마이크로니들. 물리화학적 성질을 조절해서 원하는 조직에만 도달하고
+            그곳에서만 작동하는 전달체를 만듭니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat"><b>23</b><span>편의 논문</span></div>
+        <div class="stat"><b>12</b><span>건의 특허</span></div>
+        <div class="stat"><b>2025</b><span>연구실 개설</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="membrane"></div></div>
+
+  <section class="section">
+    <div class="wrap two-col">
+      <div>
+        <h2>최근 소식</h2>
+        <ul class="news-list" id="news-list" data-limit="3"></ul>
+        <p style="margin-top:1.2rem"><a href="news.html">소식 전체 보기</a></p>
+      </div>
+      <div>
+        <h2>최근 논문</h2>
+        <div id="recent-pubs"></div>
+        <p style="margin-top:1.2rem"><a href="publications.html">논문 전체 보기</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-mark">BE<span>N</span>D</div>
+        <p>Barrier Engineering &amp; Nanomedicine Development</p>
+        <p>생체장벽·나노의약 연구실</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <address>
+          <a href="mailto:leehs@chosun.ac.kr">leehs@chosun.ac.kr</a><br>
+          조선대학교 약학대학<br>
+          광주광역시 동구 필문대로 309, 61452
+        </address>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <p><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></p>
+        <p><a href="members.html">함께할 분을 찾습니다</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">© <span class="js-year"></span> BEND Lab, Chosun University</div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
