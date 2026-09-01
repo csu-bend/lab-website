@@ -160,24 +160,38 @@ function groupByYear(items) {
   if (!host) return;
 
   if (!MEMBERS.length) {
-    host.innerHTML =
-      "<p>구성원을 모집하고 있습니다. 아래 연락처로 편하게 문의해 주세요.</p>";
+    host.innerHTML = "<p>구성원을 모집하고 있습니다. 아래 연락처로 편하게 문의해 주세요.</p>";
     return;
   }
 
-  host.innerHTML = MEMBERS.map(function (m) {
+  function card(m) {
     var photo = m.photo
-      ? '<img class="member-photo" src="assets/img/' + m.photo + '" alt="' + m.name + '">'
+      ? '<img class="member-photo" src="assets/img/' + m.photo + '" alt="' + m.name + '" loading="lazy">'
       : '<div class="member-photo-fallback"></div>';
+    var en = m.nameEn ? '<p class="name-en">' + m.nameEn + "</p>" : "";
+    var focus = m.focus ? '<p class="focus">' + m.focus + "</p>" : "";
     var mail = m.email ? '<p class="focus"><a href="mailto:' + m.email + '">' + m.email + "</a></p>" : "";
-    return (
-      '<div class="member">' + photo +
-      "<h3>" + m.name + "</h3>" +
-      '<p class="role">' + m.role + "</p>" +
-      '<p class="focus">' + (m.focus || "") + "</p>" + mail +
-      "</div>"
-    );
-  }).join("");
+    return '<div class="member">' + photo + "<h3>" + m.name + "</h3>" + en +
+           '<p class="role">' + m.role + "</p>" + focus + mail + "</div>";
+  }
+
+  var groups = [
+    { key: "full", label: "Full-time 연구생" },
+    { key: "2026", label: "2026년 연구생" }
+  ];
+
+  var html = "";
+  groups.forEach(function (g) {
+    var list = MEMBERS.filter(function (m) { return m.track === g.key; });
+    if (!list.length) return;
+    html += '<h2 class="axis-label" style="margin-top:2.6rem">' + g.label + "</h2>";
+    html += '<div class="member-grid">' + list.map(card).join("") + "</div>";
+  });
+
+  var rest = MEMBERS.filter(function (m) { return m.track !== "full" && m.track !== "2026"; });
+  if (rest.length) html += '<div class="member-grid">' + rest.map(card).join("") + "</div>";
+
+  host.outerHTML = "<div>" + html + "</div>";
 })();
 
 /* --- alumni ---------------------------------------------------------------- */

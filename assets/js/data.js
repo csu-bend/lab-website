@@ -229,22 +229,48 @@ const PATENTS = [
    구성원. photo 는 assets/img/ 안의 파일명, 사진이 없으면 "" 로 두세요.
    -------------------------------------------------------------------------- */
 const MEMBERS = [
-  // 예시입니다. 실제 구성원으로 바꾸시면 됩니다.
-  // {
-  //   name: "홍길동", nameEn: "Gil-Dong Hong",
-  //   role: "석사과정 / M.S. student",
-  //   focus: "혈액뇌관문 칩 기반 나노입자 투과 평가",
-  //   photo: "", email: ""
-  // },
+  {
+    name: "강연주", nameEn: "Yeonju Kang",
+    role: "학부연구생 · 약학과 3학년",
+    focus: "",
+    photo: "kang-yeonju.jpg", email: "", track: "full"
+  },
+  {
+    name: "강동현", nameEn: "Donghyun Kang",
+    role: "학부연구생 · 약학과 2학년",
+    focus: "",
+    photo: "kang-donghyun.jpg", email: "", track: "full"
+  },
+  {
+    name: "김지윤", nameEn: "Jiyoon Kim",
+    role: "학부연구생 · 약학과 2학년",
+    focus: "",
+    photo: "kim-jiyoon.jpg", email: "", track: "full"
+  },
+  {
+    name: "박지희", nameEn: "Jihee Park",
+    role: "학부연구생 · 약학과 5학년",
+    focus: "",
+    photo: "park-jihee.jpg", email: "", track: "2026"
+  },
+  {
+    name: "양윤서", nameEn: "Yoonseo Yang",
+    role: "학부연구생 · 약학과 5학년",
+    focus: "",
+    photo: "yang-yoonseo.jpg", email: "", track: "2026"
+  },
+  {
+    name: "조명래", nameEn: "Myeongrae Jo",
+    role: "학부연구생 · 약학과 3학년",
+    focus: "",
+    photo: "jo-myeongrae.jpg", email: "", track: "2026"
+  }
 ];
 
 const ALUMNI = [
   // { name: "이름", role: "석사 (2027)", now: "현재 소속" }
 ];
 
-/* --------------------------------------------------------------------------
-   소식. 최신 항목이 위로 오게 두세요.
-   -------------------------------------------------------------------------- */
 const NEWS = [
   {
     date: "2025.03",

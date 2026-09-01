@@ -58,11 +58,12 @@ https://<깃허브아이디>.github.io/lab-website/
 
 ### 사진
 
-`assets/img/` 폴더에 넣습니다.
+`assets/img/` 폴더에 이미 들어가 있습니다. 새 구성원이 들어오면
+사진을 정사각형(1:1)으로 잘라서 이 폴더에 넣고, `data.js` 의 `photo` 값에 파일명을 적으면 됩니다.
 
-- 교수 사진: `pi.jpg` 로 저장한 뒤, `professor.html` 에서 `<!-- -->` 로 감싸진
-  `<img class="pi-photo" ...>` 줄의 주석을 풀고, 바로 아래 `pi-photo-fallback` 줄을 지우세요.
-- 구성원 사진: 파일명을 `data.js` 의 `photo` 값에 적으면 됩니다.
+- `pi.jpg` — 교수 사진 (세로 3:4, Professor 페이지)
+- `pi-square.jpg` — 교수 사진 (정사각, Members 페이지)
+- `lab-desk.jpg`, `lab-bench.jpg` — 학생실, 실험실 (Join us 페이지)
 
 ### 연구 주제, 교수 소개
 
@@ -84,12 +85,20 @@ https://<깃허브아이디>.github.io/lab-website/
 
 ## 3. 아직 채워야 할 곳
 
-- [ ] 교수 사진 (`assets/img/pi.jpg`)
-- [ ] Google Scholar, ORCID 실제 주소 — 지금은 대문 주소만 걸려 있습니다
-- [ ] 연구실 전화번호와 호실 — footer 의 주소 부분
-- [ ] 구성원 명단
-- [ ] 연구 주제별 대표 이미지 (있으면 더 좋습니다)
+- [ ] 연구실 전화번호와 호실 — 모든 페이지 footer 의 주소 부분
+- [ ] 학생별 연구 주제 한 줄 — `data.js` 의 `focus` 값 (지금은 비어 있음)
 - [ ] 논문 DOI 링크
+- [ ] 연구 주제별 대표 이미지 (있으면 더 좋습니다)
+
+### 학생이 나가고 들어올 때
+
+`data.js` 의 `MEMBERS` 에서 `track` 값이 화면 구분을 결정합니다.
+
+- `track: "full"` → Full-time 연구생
+- `track: "2026"` → 2026년 연구생
+
+졸업하면 `MEMBERS` 에서 지우고 `ALUMNI` 에 옮기면 됩니다.
+`ALUMNI` 가 비어 있으면 졸업생 섹션은 자동으로 숨겨집니다.
 
 ---
 
@@ -101,7 +110,8 @@ lab-website/
 ├── professor.html      교수 소개
 ├── research.html       연구 주제
 ├── publications.html   논문·특허
-├── members.html        구성원 + 모집
+├── members.html        구성원
+├── join.html           모집 안내
 ├── news.html           소식
 ├── .nojekyll           (GitHub Pages 설정, 지우지 마세요)
 └── assets/
